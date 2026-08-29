@@ -1,0 +1,41 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+postgres-data/
+redis-data/
+elasticsearch-data/
+coverage/
+junit.xml
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+docker_start.log
+
+# Local test/demo files
+recipients.csv
+
+# Temporary files
+scratch/

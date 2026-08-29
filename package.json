@@ -1,0 +1,17 @@
+{
+  "name": "reachinbox-email-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:worker": "cd backend && npm run worker",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "prisma:migrate": "cd backend && npx prisma migrate dev",
+    "prisma:generate": "cd backend && npx prisma generate",
+    "prisma:seed": "cd backend && npx prisma db seed",
+    "test:backend": "cd backend && npm run test"
+  }
+}
