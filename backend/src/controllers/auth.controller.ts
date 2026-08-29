@@ -300,8 +300,8 @@ export function logout(
 
     res.clearCookie('sid', {
       httpOnly: true,
-      secure: false,
-      sameSite: 'lax',
+      secure: env.NODE_ENV === 'production',
+      sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
     });
 
     logger.info(

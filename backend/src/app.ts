@@ -25,6 +25,11 @@ import healthRouter from './routes/health.routes';
 
 const app = express();
 
+// Trust reverse proxy in production to allow transmission of Secure cookies
+if (env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1);
+}
+
 // 1. Basic Middlewares
 app.use(helmet({
   contentSecurityPolicy: false, // Turn off CSP temporarily if Bull Board assets are blocked
@@ -55,7 +60,7 @@ app.use(
     cookie: {
       httpOnly: true,
       secure: env.NODE_ENV === 'production',
-      sameSite: env.NODE_ENV === 'production' ? 'strict' : 'lax',
+      sameSite: env.NODE_ENV === 'production' ? 'none' : 'lax',
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days expiration
     },
   })

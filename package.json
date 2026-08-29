@@ -12,6 +12,9 @@
     "prisma:migrate": "cd backend && npx prisma migrate dev",
     "prisma:generate": "cd backend && npx prisma generate",
     "prisma:seed": "cd backend && npx prisma db seed",
-    "test:backend": "cd backend && npm run test"
+    "test:backend": "cd backend && npm run test",
+    "build:backend": "cd backend && npm install && npm run prisma:generate && npm run build",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build": "npm run build:backend && npm run build:frontend"
   }
 }
