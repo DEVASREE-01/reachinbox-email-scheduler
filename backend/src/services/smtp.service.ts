@@ -38,13 +38,17 @@ export async function getSMTPTransporter(): Promise<nodemailer.Transporter> {
     }
   }
 
+  // Safely assert non-nullability to satisfy Nodemailer typings
+  const authUser = user!;
+  const authPass = pass!;
+
   transporter = nodemailer.createTransport({
     host,
     port,
     secure: port === 465, // Use SSL/TLS for port 465, false for 587 or others
     auth: {
-      user,
-      pass,
+      user: authUser,
+      pass: authPass,
     },
     pool: true, // Enable Nodemailer transport pooling
     maxConnections: env.WORKER_CONCURRENCY,
