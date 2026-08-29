@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ReachInbox Email Scheduler
 
 ReachInbox Email Scheduler is a production-grade full-stack email scheduling and automation system designed to handle high-throughput email outreach campaigns. It allows users to register custom SMTP senders, schedule delayed email campaigns via CSV uploads, monitor processing queues in real-time, and throttle outgoing traffic dynamically with per-sender rate limits.
