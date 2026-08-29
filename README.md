@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ReachInbox Email Scheduler
 
 ReachInbox Email Scheduler is a production-grade full-stack email scheduling and automation system designed to handle high-throughput email outreach campaigns. It allows users to register custom SMTP senders, schedule delayed email campaigns via CSV uploads, monitor processing queues in real-time, and throttle outgoing traffic dynamically with per-sender rate limits.
@@ -248,3 +249,7 @@ npm run test
     *   Verify that 2 emails send immediately.
     *   Verify the remaining 3 are rescheduled for the next hour.
     *   Check your Slack workspace; a rate limit alert will be posted to the `#general` channel.
+=======
+# reachinbox-email-scheduler
+A full-stack email scheduling application built with React, Express, PostgreSQL, Redis, BullMQ, Google OAuth, and Ethereal SMTP.
+>>>>>>> 26010e0b09d33b3ff9a08fefed0addb97f8575e4
